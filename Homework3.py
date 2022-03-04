@@ -6,10 +6,10 @@ inp1=list(inp)
 
 #Поиск номера по базе
 
-sum0=(inp1[0])
-sum1=(inp1[1])
-sum2=(inp1[2])
-sum3=(inp1[3])
+sum0=(inp1[2])
+sum1=(inp1[3])
+sum2=(inp1[4])
+sum3=(inp1[5])
 
 inp3=(sum0+sum1+sum2+sum3)
 inp4=str(inp3)
@@ -28,9 +28,9 @@ print('count of unique numbers : ' ,(lenn1))
 
 #Сумма вводимых чисел
 
-summ0=int(inp1[0])
-summ1=int(inp1[1])
-summ2=int(inp1[2])
-summ3=int(inp1[3])
+summ0=int(inp1[2])
+summ1=int(inp1[3])
+summ2=int(inp1[4])
+summ3=int(inp1[5])
 summ4=(summ0+summ1+summ2+summ3)
 print('sum : ', summ4)
