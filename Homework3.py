@@ -23,14 +23,11 @@ def main():
 
 #Количество уникальных номеров
 
-
     lenn0=set(plates_list)
     lenn1=len(lenn0)
     print('count of unique numbers : ' ,(lenn1))
 
 #Сумма вводимых чисел
-
-
 
     summ0=int(inp1[2])
     summ1=int(inp1[3])
