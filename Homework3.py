@@ -7,18 +7,24 @@ def main():
 
 #Поиск номера по базе
 
-    sum0=(inp1[2])
-    sum1=(inp1[3])
-    sum2=(inp1[4])
-    sum3=(inp1[5])
+    sum0=(inp1[0])
+    sum1=(inp1[1])
+    sum2=(inp1[2])
+    sum3=(inp1[3])
+    sum4=(inp1[4])
+    sum5=(inp1[5])
+    sum6=(inp1[6])
+    sum7=(inp1[7])
 
-    inp3=(sum0+sum1+sum2+sum3)
+
+    inp3=(sum0+sum1+sum2+sum3+sum4+sum5+sum6+sum7)
     inp4=str(inp3)
+    inp5=inp4.upper()
 
-    if inp4 in p:
+    if inp5 in p:
         print('your number in base')
 
-    if inp4 not in p:
+    if inp5 not in p:
         print('your number not in base')
 
 #Количество уникальных номеров
@@ -35,6 +41,7 @@ def main():
     summ3=int(inp1[5])
     summ4=(summ0+summ1+summ2+summ3)
     print('sum : ', summ4)
+
 
 while __name__=='__main__':
     main()
