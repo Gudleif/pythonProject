@@ -14,6 +14,7 @@ def main():
     if lenn > 8 or lenn < 8:
         print('False')
 
+
     elif inp2 in p:
         print('your number in base')
 
@@ -23,64 +24,22 @@ def main():
     lenn1=len(lenn0)
     print('count of unique numbers : ' ,(lenn1))
 
-    return sum0
+    #Возврат значений
+
+    l = (inp1[0:2])
+    l_1 = (inp1[2:6])
+    l_2 = (''.join(l_1))
+    l_3 = map(int, l_2)
+    l_4 = list(l_3)
+    return l_4, l
 
 #Сумма вводимых
 
 def main_1():
-    l = (f'{main()}')
-    l1 = list(l)
-    lo = []
-    l2 = (l1[0::])
-    l3 = (''.join(l2))
+    l = sum(main()[0])
+    print (l)
+    return l
 
-    if '1' in l3:
-        cou = l3.count('1')
-        cou_1 = int('1')
-        ret = (cou * cou_1)
-        lo.append(ret)
-    if '2' in l3:
-        cou_2 = l3.count('2')
-        cou_3 = int('2')
-        ret_1 = (cou_2 * cou_3)
-        lo.append(ret_1)
-    if '3' in l3:
-        cou_4 = l3.count('3')
-        cou_5 = int('3')
-        ret_2 = (cou_4 * cou_5)
-        lo.append(ret_2)
-    if '4' in l3:
-        cou_6 = l3.count('4')
-        cou_7 = int('4')
-        ret_3 = (cou_6 * cou_7)
-        lo.append(ret_3)
-    if '5' in l3:
-        cou_8 = l3.count('5')
-        cou_9 = int('5')
-        ret_4 = (cou_8 * cou_9)
-        lo.append(ret_4)
-    if '6' in l3:
-        cou_10 = l3.count('6')
-        cou_11 = int('6')
-        ret_5 = (cou_10 * cou_11)
-        lo.append(ret_5)
-    if '7' in l3:
-        cou_12 = l3.count('7')
-        cou_13 = int('7')
-        ret_6 = (cou_12 * cou_13)
-        lo.append(ret_6)
-    if '8' in l3:
-        cou_14 = l3.count('8')
-        cou_15 = int('8')
-        ret_7 = (cou_14 * cou_15)
-        lo.append(ret_7)
-    if '9' in l3:
-        cou_16 = l3.count('9')
-        cou_17 = int('9')
-        ret_8 = (cou_16 * cou_17)
-        lo.append(ret_8)
-
-    print(sum(lo))
 
 while True:
     main_1()
