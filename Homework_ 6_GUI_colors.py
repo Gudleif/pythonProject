@@ -80,7 +80,7 @@ def percent():
 def save():
     if percent() > 0:
         file = open('data users.txt', 'a')
-        file.write(f'\n name of user: {li_name[0]}, averenge time : {avg()}, best time: {best_time()}, date of test: {time_now()}')
+        file.write(f'\n name of user: {li_name[0]}, average time : {avg()}, best time: {best_time()}, date of test: {time_now()}')
         file.close()
 
 
