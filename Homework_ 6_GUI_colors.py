@@ -21,6 +21,8 @@ li_avg_time = []  # список с добавлением времени все
 
 li_true_count = [0]  # список количества верных нажатий (на красный)
 
+li_range = []  # список добавления значений из функции перебора чисел
+
 # область ввода логина
 entry = tk.Entry()
 entry.place(x=20, y=100)
@@ -115,14 +117,29 @@ def time_now():
     return date_now
 
 
+# перебор чисел для анализа наличия цифр в логине
+def rangee():
+    x = 0
+    for i in range(0,10):
+        x += 1
+        x_1 = str(x)
+        li_range.append(x_1)
+    print(li_range)
+
+
 # функция получения логина из области ввода и добавления в список
 def entryy():
     gett = entry.get()
     li_name.insert(0, gett)
+    del li_name[1:]
     print(li_name)
-    lenn = len(li_name)
-    if lenn > 0:
-        rand_colors()
+    lenn = len(li_name[0])
+    listt = list(li_name[0])
+    rangee()
+    for i in listt[0:]:
+        print(i)
+        if i not in li_range and lenn > 2:
+            rand_colors()
 
 
 # кнопка запуска функции для получения логина
