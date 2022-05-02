@@ -1,35 +1,32 @@
 import random
 
-player = ('Your choice (rock paper scissors lizard spock?) ')
+player = 'Your choice (rock paper scissors lizard spock?) '
 spisok = ('rock', 'paper', 'scissors', 'lizard', 'spock')
-comp = ('Computer WIN!')
-play = ('Player WIN')
-draw = ('No one WIN')
-repeat = ('Repeat (Y/N)?')
-inval = ('Invalid input')
+comp = 'Computer WIN!'
+play = 'Player WIN'
+draw = 'No one WIN'
+repeat = 'Repeat (Y/N)?'
+inval = 'Invalid input'
 yes = ('y', 'Y')
 no = ('n', 'N')
 
 
-    #выход
-
+# выход
 def out():
     quit()
 
 
-    #проверка входящих данных
-
+# проверка входящих данных
 def inp():
     player_1 = input(f'{player} ')
     if player_1 not in spisok:
-        print (f'{inval} "{player_1}"')
+        print(f'{inval} "{player_1}"')
         wrong()
     else:
         return player_1
 
 
-    #запрос на повторный ввод
-
+# запрос на повторный ввод
 def wrong():
     rep = input(f'{repeat} ')
     if rep in yes:
@@ -37,18 +34,17 @@ def wrong():
     if rep in no:
         out()
     else:
-        print (f'{inval} "{rep}"')
+        print(f'{inval} "{rep}"')
         wrong()
 
-    #выбор роли компьютера
 
+# выбор роли компьютера
 def rand():
     computer = random.choice(spisok)
     return computer
 
 
-    #выбор победителя
-
+# выбор победителя
 def winner():
     comp_1 = rand()
     player_2 = inp()
@@ -64,18 +60,16 @@ def winner():
     elif player_2 == 'paper' and comp_1 in paper_1:
         print(play)
     elif player_2 == 'scissors' and comp_1 in scissors_1:
-        print (play)
+        print(play)
     elif player_2 == 'lizard' and comp_1 in lizard_1:
-        print (play)
+        print(play)
     elif player_2 == 'spock' and comp_1 in spock_1:
-        print (play)
+        print(play)
     elif player_2 == comp_1:
-        print (f'{player_2} {comp_1} {draw}')
+        print(f'{player_2} {comp_1} {draw}')
     else:
-        print (comp)
-
+        print(comp)
     wrong()
 
 
 winner()
-
